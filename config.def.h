@@ -80,12 +80,18 @@ char termname[] = "st-256color";
  *
  *	stty tabs
  */
-static unsigned int tabspaces = 4;
+static unsigned int tabspaces = 8;
 
 /* Terminal colors (16 first used in escape sequence) */
 #include "/home/prot/.my_Xcolors/active-tempus-theme.h"
 
-/* 2 4 6 7: █ _ | ☃ */
+/*
+ * Default shape of cursor
+ * 2: Block ("█")
+ * 4: Underline ("_")
+ * 6: Bar ("|")
+ * 7: Snowman ("☃")
+ */
 unsigned int cursorshape = 2;
 
 /*
@@ -112,14 +118,8 @@ unsigned int defaultattr = 11;
  */
 MouseShortcut mshortcuts[] = {
 	/* button               mask            string */
-	{ Button4,              XK_NO_MOD,      "\031" },
-	{ Button5,              XK_NO_MOD,      "\005" },
-};
-
-MouseKey mkeys[] = {
-	/* button               mask            function        argument */
-	{ Button4,              XK_NO_MOD,      kscrollup,      {.i =  1} },
-	{ Button5,              XK_NO_MOD,      kscrolldown,    {.i =  1} },
+	{ Button4,              XK_ANY_MOD,     "\031" },
+	{ Button5,              XK_ANY_MOD,     "\005" },
 };
 
 /* Internal keyboard shortcuts. */
@@ -140,10 +140,6 @@ Shortcut shortcuts[] = {
 	{ TERMMOD,              XK_Y,           selpaste,       {.i =  0} },
 	{ TERMMOD,              XK_Num_Lock,    numlock,        {.i =  0} },
 	{ TERMMOD,              XK_I,           iso14755,       {.i =  0} },
-	{ ShiftMask,            XK_Page_Up,     kscrollup,      {.i = -1} },
-	{ ShiftMask,            XK_Page_Down,   kscrolldown,    {.i = -1} },
-	{ MODKEY,				XK_k,			kscrollup,      {.i = 1}  },
-	{ MODKEY,            	XK_j,			kscrolldown,    {.i = 1}  },
 };
 
 /*

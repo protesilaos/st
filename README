@@ -1,9 +1,9 @@
 My soft fork of st - simple terminal
 ====================================
 
-This is a soft fork of `st`. It implements a limited selection of official patches and makes some marginal modifications to the program's base configurations.
+This is a soft fork of `st`. Best used in conjunction with `tmux`.
 
-IMPORTANT. This repo is intended primarily for personal use. It shall serve as a base for a bespoke `makepkg` port on Arch Linux.
+IMPORTANT. This repo is intended primarily for personal use. It might serve as a base for a bespoke `makepkg` port on Arch Linux.
 
 ORIGINAL README BELOW
 ---------------------
