@@ -1,9 +1,7 @@
 My soft fork of st - simple terminal
 ====================================
 
-This is a soft fork of `st`. Best used in conjunction with `tmux`.
-
-IMPORTANT. This repo is intended primarily for personal use. It might serve as a base for a bespoke `makepkg` port on Arch Linux.
+This is a soft fork of `st` version 0.8 (released on 2018-03-14). Mainly to change the colour definitions in order to work in my custom environment. See my dotfiles https://github.com/protesilaos/dotfiles.
 
 ORIGINAL README BELOW
 ---------------------
